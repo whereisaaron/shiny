@@ -32,7 +32,7 @@ sed -i -e "${regexp}" README.md
 echo "Tagging as v${version} and pushing"
 git commit -a -m "Bump Shiny Server version to ${version}"
 git tag -a -m "Shiny Server version ${version}" "v${version}"
-git push --tags
+git push --follow-tags
 
 # The push will trigger Docker Hub to automatically build the new tag
 
