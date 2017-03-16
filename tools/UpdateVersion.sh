@@ -23,6 +23,8 @@ fi
 echo "Updating Dockerfile to version ${version}"
 regexp='s/\(shiny-server-\)[0-9][0-9.]\+\(-amd64.deb"\)/\1'"${version}"'\2/g'
 sed -i -e "${regexp}" Dockerfile
+regexp='s/\(version \)[0-9][0-9.]\+/\1'"${version}"'/g'
+sed -i -e "${regexp}" README.md
 
 #------------------------------------------------------------
 # Commit, tag and push the update
