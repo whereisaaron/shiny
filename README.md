@@ -5,7 +5,7 @@ This is a Dockerfile for Shiny Server on Debian "testing" for Shiny Server. It i
 
 The official image is available from [Docker Hub](https://registry.hub.docker.com/u/rocker/shiny/).
 
-This unoffical fork creates [tagged docker images](https://hub.docker.com/u/whereisaaron/shiny/tags/) for specific specific versions of Shiny Server, so downstream builds can have stable base images.
+This [unoffical fork](https://github.com/whereisaaron/shiny) creates [tagged docker images](https://hub.docker.com/u/whereisaaron/shiny/tags/) for specific specific versions of Shiny Server, so downstream builds can have stable base images.
 
 The latest image for [version 1.5.3.838](https://hub.docker.com/r/shrektan/shiny/tags/).
 
