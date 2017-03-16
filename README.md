@@ -5,7 +5,7 @@ This is a Dockerfile for Shiny Server on Debian "testing" for Shiny Server. It i
 
 The official image is available from [Docker Hub](https://registry.hub.docker.com/u/rocker/shiny/).
 
-This [unoffical fork](https://github.com/whereisaaron/shiny) creates [tagged docker images](https://hub.docker.com/r/whereisaaron/shiny/tags/) for specific specific versions of Shiny Server, so downstream builds can have stable base images.
+This [unoffical fork](https://github.com/whereisaaron/shiny) creates [tagged images on Docker hub](https://hub.docker.com/r/whereisaaron/shiny/tags/) for specific specific versions of Shiny Server, so downstream builds can have stable base images.
 
 The latest tagged image is `whereisaaron/shiny:1.5.3.838`.
 
@@ -16,7 +16,7 @@ As of January 2017, the Shiny Server log is written to `stdout` and can be viewe
 To run a temporary container with Shiny Server:
 
 ```sh
-docker run --rm -p 3838:3838 rocker/shiny
+docker run --rm -p 3838:3838 whereisaaron/shiny:1.5.3.838
 ```
 
 
