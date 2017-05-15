@@ -7,7 +7,7 @@ The official image is available from [Docker Hub](https://registry.hub.docker.co
 
 This [unoffical fork](https://github.com/whereisaaron/shiny) creates [tagged images on Docker hub](https://hub.docker.com/r/whereisaaron/shiny/tags/) for specific specific versions of Shiny Server, so downstream builds can have stable base images.
 
-The latest tagged image is `whereisaaron/shiny:1.5.3.838`.
+The latest tagged image is `whereisaaron/shiny:1.5.4.841`.
 
 As of January 2017, the Shiny Server log is written to `stdout` and can be viewed using `docker logs`. The logs for individual apps are in the `/var/log/shiny-server` directory, as described in the [Shiny Server Administrator's Guide]( http://docs.rstudio.com/shiny-server/#application-error-logs)
 
@@ -16,7 +16,7 @@ As of January 2017, the Shiny Server log is written to `stdout` and can be viewe
 To run a temporary container with Shiny Server:
 
 ```sh
-docker run --rm -p 3838:3838 whereisaaron/shiny:1.5.3.838
+docker run --rm -p 3838:3838 whereisaaron/shiny:1.5.4.841
 ```
 
 
@@ -26,7 +26,7 @@ To expose a directory on the host to the container use `-v <host_dir>:<container
 docker run --rm -p 3838:3838 \
     -v /srv/shinyapps/:/srv/shiny-server/ \
     -v /srv/shinylog/:/var/log/shiny-server/ \
-    whereisaaron/shiny:1.5.3.838
+    whereisaaron/shiny:1.5.4.841
 ```
 
 If you have an app in /srv/shinyapps/appdir, you can run the app by visiting http://localhost:3838/appdir/. (If using boot2docker, visit http://192.168.59.103:3838/appdir/)
@@ -38,7 +38,7 @@ In a real deployment scenario, you will probably want to run the container in de
 docker run -d -p 80:3838 \
     -v /srv/shinyapps/:/srv/shiny-server/ \
     -v /srv/shinylog/:/var/log/shiny-server/ \
-    whereisaaron/shiny:1.5.3.838
+    whereisaaron/shiny:1.5.4.841
 ```
 
 
